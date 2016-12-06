@@ -1,0 +1,7 @@
+exports[`Vainglory.matches .searchPlayers(arr) should search players for matches 1`] = `
+Object {
+  "data": "",
+  "error": "",
+  "meta": "",
+}
+`;

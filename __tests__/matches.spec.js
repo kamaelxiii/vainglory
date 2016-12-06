@@ -19,10 +19,10 @@ describe('Vainglory.matches', () => {
   });
 
   // TODO
-  // it('.searchPlayers(arr) should search players for matches', async () => {
-  //   const players = await vainglory.matches.searchPlayers(['famous'], 1, 1);
-  //   console.log(players);
-  // });
+  it('.searchPlayers(arr) should search players for matches', async () => {
+    const matches = await vainglory.matches.searchPlayers(['test']);
+    expect(matches).toMatchSnapshot();
+  });
 
   // it('.searchUuid(uuid) should return results', async () => {
   //   const results = await vainglory.matches.searchUuid('044a3f8f-f10b-4bf1-83c0-651da4bc3c55');
