@@ -1,9 +1,9 @@
 import Vainglory from '../src/Vainglory';
 
-const validMethods = ['searchPlayers', 'searchUuid'];
+const validMethods = ['collection'];
 
 describe('Vainglory.matches', () => {
-  const vainglory = new Vainglory('3wCUeHy6RiRBoVjQfbTz32yk9nlUXdj8RzwPd5rj');
+  const vainglory = new Vainglory('aaa.bbb.ccc');
 
   it('should contain valid methods', () => {
     validMethods.forEach((method) => {
@@ -11,28 +11,11 @@ describe('Vainglory.matches', () => {
     })
   });
 
-  it('.searchPlayers(players, startTime, endTime) should throw an error if correct types are not provided', () => {
-    const str = 'abc123';
-    vainglory.matches.searchPlayers(str).catch(e => expect(e.toThrowError('Expecting array for players')));
-    vainglory.matches.searchPlayers([], str).catch(e => expect(e.toThrowError('Expecting integer for startTime')));
-    vainglory.matches.searchPlayers([], 1, str).catch(e => expect(e.toThrowError('Expecting integer for endTime')));
-  });
-
   // TODO
-  it('.searchPlayers(arr) should search players for matches', async () => {
-    const matches = await vainglory.matches.searchPlayers(['test']);
+  it('.collection should get a collection of matches', async () => {
+    const matches = await vainglory.matches.collection();
     expect(matches).toMatchSnapshot();
   });
 
-  // it('.searchUuid(uuid) should return results', async () => {
-  //   const results = await vainglory.matches.searchUuid('044a3f8f-f10b-4bf1-83c0-651da4bc3c55');
-
-  //   console.log(results);
-  // });
-
-  // it('.searchUuid(uuid, { transverse: true }) should return inner results', async () => {
-  //   const results = await vainglory.matches.searchUuid('044a3f8f-f10b-4bf1-83c0-651da4bc3c55', { transverse: true });
-  //   expect(results).toMatchSnapshot();
-  // });
 
 });
