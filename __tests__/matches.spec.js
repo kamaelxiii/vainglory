@@ -1,4 +1,4 @@
-// TODO: Mock network requests
+jest.mock('../src/Http');
 
 import Vainglory from '../src/Vainglory';
 
@@ -21,6 +21,7 @@ describe('Vainglory.matches', () => {
   it('.single should get a single match', async () => {
     const matchId = '0123b560-d74c-11e6-b845-0671096b3e30';
     const match = await vainglory.matches.single(matchId);
+
     expect(match).toMatchSnapshot();
   });
 
