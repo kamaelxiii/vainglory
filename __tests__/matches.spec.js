@@ -1,3 +1,5 @@
+// TODO: Mock network requests
+
 import Vainglory from '../src/Vainglory';
 
 const validMethods = ['collection'];
@@ -11,11 +13,15 @@ describe('Vainglory.matches', () => {
     })
   });
 
-  // TODO
   it('.collection should get a collection of matches', async () => {
     const matches = await vainglory.matches.collection();
     expect(matches).toMatchSnapshot();
   });
 
+  it('.single should get a single match', async () => {
+    const matchId = '0123b560-d74c-11e6-b845-0671096b3e30';
+    const match = await vainglory.matches.single(matchId);
+    expect(match).toMatchSnapshot();
+  });
 
 });
