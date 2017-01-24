@@ -20,4 +20,12 @@ describe('Vainglory.single', () => {
     expect(player).toMatchSnapshot();
   });
 
+  it('.single should throw if invalid param is given', async () => {
+    try {
+      await vainglory.players.single({});
+    } catch (err) {
+      expect(err).toThrow();
+    }
+  });
+
 });
