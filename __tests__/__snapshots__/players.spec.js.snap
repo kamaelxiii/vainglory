@@ -1,0 +1,19 @@
+exports[`Vainglory.single .single should get a single player 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "createdAt": "2017-01-20T19:33:28Z",
+      "name": "boombastic04",
+      "shardId": "na",
+      "stats": Object {
+        "lifetimeGold": 11007,
+        "lossStreak": 2,
+        "winStreak": 0,
+      },
+      "titleId": "semc-vainglory",
+    },
+    "id": "6abb30de-7cb8-11e4-8bd3-06eb725f8a76",
+    "type": "player",
+  },
+}
+`;

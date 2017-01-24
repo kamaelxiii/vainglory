@@ -2,7 +2,7 @@ jest.mock('../src/Http');
 
 import Vainglory from '../src/Vainglory';
 
-const validMethods = ['collection'];
+const validMethods = ['single', 'collection'];
 
 describe('Vainglory.matches', () => {
   const vainglory = new Vainglory('aaa.bbb.ccc');
