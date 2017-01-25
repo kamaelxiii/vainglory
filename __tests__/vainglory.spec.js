@@ -17,4 +17,11 @@ describe('Vainglory class setup', () => {
     expect(vainglory).toBeDefined();
   });
 
+  it('should provide some utilities', () => {
+    const apiKey = 'aaa.bbb.ccc';
+    const vainglory = new Vainglory(apiKey);
+    
+    expect(vainglory.utils).toBeDefined();
+  });
+
 });

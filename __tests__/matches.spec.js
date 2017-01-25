@@ -1,4 +1,5 @@
 jest.mock('../src/Http');
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
 
 import Vainglory from '../src/Vainglory';
 
@@ -21,6 +22,8 @@ describe('Vainglory.matches', () => {
   it('.single should get a single match', async () => {
     const matchId = '0123b560-d74c-11e6-b845-0671096b3e30';
     const match = await vainglory.matches.single(matchId);
+
+    // console.log(match.rosters[0].participants[0].player.stats);
 
     expect(match).toMatchSnapshot();
   });
