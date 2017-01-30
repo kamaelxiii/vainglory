@@ -1,6 +1,6 @@
 exports[`Vainglory.single .single should get a single player 1`] = `
-Object {
-  "data": Object {
+Player {
+  "_data": Object {
     "attributes": Object {
       "createdAt": "2017-01-20T19:33:28Z",
       "name": "boombastic04",
